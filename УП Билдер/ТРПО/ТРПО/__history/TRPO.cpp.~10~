@@ -1,0 +1,118 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+#include "main.h"
+#include "TRPO.h"
+#include "AddStudent.h"
+#include "StudentInfo.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm15 *Form15;
+//---------------------------------------------------------------------------
+__fastcall TForm15::TForm15(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+extern int mode;
+void __fastcall TForm15::RegButtonClick(TObject *Sender)
+{
+	Form15->Caption="Регистрация";
+	eye1->Visible=true;
+	eye2->Visible=true;
+	RegButton->Visible=false;
+	InButton->Visible=false;
+	RegAcc->Visible=true;
+	login->Visible=true;
+	pass->Visible=true;
+	reppass->Visible=true;
+	Back->Visible=true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm15::InButtonClick(TObject *Sender)
+{
+	Form15->Caption="Вход в систему";
+	eye1->Visible=true;
+	login->Visible=true;
+	pass->Visible=true;
+	InAcc->Visible = true;
+	RegButton->Visible = false;
+	InButton->Visible = false;
+    Back->Visible=true;
+}
+//---------------------------------------------------------------------------
+
+
+
+
+
+void __fastcall TForm15::BackClick(TObject *Sender)
+{
+	Form15->Caption="Главное меню входа в систему";
+	RegAcc->Visible = false;
+	InAcc->Visible = false;
+	login->Visible=false;
+	pass->Visible=false;
+	reppass->Visible=false;
+	Back->Visible=false;
+	RegButton->Visible=true;
+	InButton->Visible=true;
+	eye1->Visible=false;
+	eye2->Visible=false;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm15::InAccClick(TObject *Sender)
+{
+	Form15->Hide();
+	Form1->Show();
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm15::RegAccClick(TObject *Sender)
+{
+	ShowMessage("Вы успешно зарегистрировались");
+	Form15->Caption="Главное меню входа в систему";
+    eye1->Visible=false;
+	eye2->Visible=false;
+	RegAcc->Visible = false;
+	InAcc->Visible = false;
+	login->Visible=false;
+	pass->Visible=false;
+	reppass->Visible=false;
+	Back->Visible=false;
+	RegButton->Visible=true;
+	InButton->Visible=true;
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm15::eye1MouseLeave(TObject *Sender)
+{
+	 pass->PasswordChar='*';
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm15::eye1MouseEnter(TObject *Sender)
+{
+	  pass->PasswordChar='\0';
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm15::eye2MouseLeave(TObject *Sender)
+{
+   reppass->PasswordChar='*';
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm15::eye2MouseEnter(TObject *Sender)
+{
+	 reppass->PasswordChar='\0';
+}
+//---------------------------------------------------------------------------
+

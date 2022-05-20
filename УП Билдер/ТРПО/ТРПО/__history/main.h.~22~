@@ -1,0 +1,71 @@
+//---------------------------------------------------------------------------
+
+#ifndef mainH
+#define mainH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.DBCGrids.hpp>
+#include <Vcl.DBCtrls.hpp>
+#include <Vcl.Mask.hpp>
+#include <Data.DB.hpp>
+#include <Data.Win.ADODB.hpp>
+#include <Vcl.Menus.hpp>
+#include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Graphics.hpp>
+//---------------------------------------------------------------------------
+class TForm1 : public TForm
+{
+__published:	// IDE-managed Components
+	TButton *Check;
+	TDBCtrlGrid *DBCtrlGrid1;
+	TDataSource *DataSource1;
+	TADOQuery *ADOQuery1;
+	TButton *add;
+	TDBEdit *DBEdit1;
+	TDBEdit *DBEdit2;
+	TDBEdit *DBEdit3;
+	TButton *Exit;
+	TEdit *searchN;
+	TEdit *searchF;
+	TEdit *searchO;
+	TLabel *Label1;
+	TLabel *Label2;
+	TLabel *Label3;
+	TLabel *Label4;
+	TButton *sbros;
+	TMainMenu *MainMenu1;
+	TMenuItem *N1;
+	TMenuItem *N2;
+	TMenuItem *N3;
+	TMenuItem *N4;
+	TMenuItem *N5;
+	TMenuItem *N6;
+	TMenuItem *N7;
+	TImage *Image1;
+	void __fastcall CheckClick(TObject *Sender);
+	void __fastcall addClick(TObject *Sender);
+	void __fastcall DBCtrlGrid1DblClick(TObject *Sender);
+	void __fastcall ExitClick(TObject *Sender);
+	void __fastcall FormActivate(TObject *Sender);
+	void __fastcall searchNChange(TObject *Sender);
+	void __fastcall searchFChange(TObject *Sender);
+	void __fastcall searchOChange(TObject *Sender);
+	void __fastcall sbrosClick(TObject *Sender);
+	void __fastcall N2Click(TObject *Sender);
+	void __fastcall N3Click(TObject *Sender);
+	void __fastcall N4Click(TObject *Sender);
+	void __fastcall N5Click(TObject *Sender);
+	void __fastcall N6Click(TObject *Sender);
+	void __fastcall N7Click(TObject *Sender);
+	void __fastcall FormCreate(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+	__fastcall TForm1(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm1 *Form1;
+//---------------------------------------------------------------------------
+#endif

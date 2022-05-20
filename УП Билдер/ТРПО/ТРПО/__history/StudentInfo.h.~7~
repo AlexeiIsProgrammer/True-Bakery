@@ -1,0 +1,54 @@
+//---------------------------------------------------------------------------
+
+#ifndef StudentInfoH
+#define StudentInfoH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.DBCtrls.hpp>
+#include <Vcl.Mask.hpp>
+//---------------------------------------------------------------------------
+class TForm3 : public TForm
+{
+__published:	// IDE-managed Components
+	TButton *change;
+	TButton *save;
+	TDBEdit *name;
+	TDBEdit *fam;
+	TDBEdit *otch;
+	TLabel *Имя;
+	TLabel *Label2;
+	TLabel *Head;
+	TLabel *Фамилия;
+	TLabel *Отчество;
+	TLabel *Label1;
+	TLabel *Label3;
+	TDBEdit *spec;
+	TLabel *Label4;
+	TLabel *Label5;
+	TDBEdit *cource;
+	TLabel *Label6;
+	TDBEdit *date;
+	TLabel *Label7;
+	TLabel *Label8;
+	TDBEdit *year;
+	TLabel *Label9;
+	TDBEdit *ball;
+	TButton *next;
+	TButton *back;
+	TDBComboBox *DBComboBox1;
+	void __fastcall nextClick(TObject *Sender);
+	void __fastcall backClick(TObject *Sender);
+	void __fastcall FormActivate(TObject *Sender);
+	void __fastcall changeClick(TObject *Sender);
+	void __fastcall saveClick(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+	__fastcall TForm3(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm3 *Form3;
+//---------------------------------------------------------------------------
+#endif

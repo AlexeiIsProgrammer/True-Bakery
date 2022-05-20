@@ -1,0 +1,49 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+#include "main.h"
+#include "TRPO.h"
+#include "AddStudent.h"
+#include "StudentInfo.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm3 *Form3;
+//---------------------------------------------------------------------------
+__fastcall TForm3::TForm3(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+extern int sele;
+void __fastcall TForm3::nextClick(TObject *Sender)
+{
+	Form1->ADOQuery1->Next();
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm3::backClick(TObject *Sender)
+{
+	Form1->ADOQuery1->Prior();
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm3::FormActivate(TObject *Sender)
+{
+	Form1->ADOQuery1->First();
+	while(!Form1->ADOQuery1->Eof)
+	{
+		if(Form1->ADOQuery1->FieldByName("Номер")->AsInteger==sele)
+		{
+		   break;
+		}
+		Form1->ADOQuery1->Next();
+    }
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm3::changeClick(TObject *Sender)
+{
+	change->Enabled=false;
+	next->Enabled=false;
+	back->Enabled=false;
+}
+//---------------------------------------------------------------------------

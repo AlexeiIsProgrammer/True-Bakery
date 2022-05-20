@@ -1,0 +1,95 @@
+object Form15: TForm15
+  Left = 0
+  Top = 0
+  Caption = 'Form15'
+  ClientHeight = 333
+  ClientWidth = 766
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Button1: TButton
+    Left = 232
+    Top = 176
+    Width = 153
+    Height = 33
+    Caption = #1056#1077#1075#1080#1089#1090#1088#1072#1094#1080#1103
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 232
+    Top = 232
+    Width = 153
+    Height = 33
+    Caption = #1042#1093#1086#1076
+    TabOrder = 1
+  end
+  object DBGrid1: TDBGrid
+    Left = 438
+    Top = 8
+    Width = 320
+    Height = 120
+    DataSource = DataSource1
+    TabOrder = 2
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object Edit1: TEdit
+    Left = 48
+    Top = 48
+    Width = 121
+    Height = 21
+    TabOrder = 3
+    TextHint = #1051#1086#1075#1080#1085
+  end
+  object Edit2: TEdit
+    Left = 48
+    Top = 75
+    Width = 121
+    Height = 21
+    TabOrder = 4
+    TextHint = #1055#1072#1088#1086#1083#1100
+  end
+  object Button3: TButton
+    Left = 190
+    Top = 46
+    Width = 99
+    Height = 50
+    Caption = #1042#1086#1081#1090#1080
+    TabOrder = 5
+  end
+  object ADOQuery1: TADOQuery
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select * from '#1043#1077#1085#1080#1081';')
+    Left = 680
+    Top = 192
+  end
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\OneDrive\'#1056#1072#1073#1086#1095#1080#1081 +
+      ' '#1089#1090#1086#1083'\'#1058#1056#1055#1054'\'#1090#1088#1087#1086'.mdb;Persist Security Info=False'
+    LoginPrompt = False
+    Mode = cmShareDenyNone
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 544
+    Top = 192
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOQuery1
+    Left = 608
+    Top = 192
+  end
+end

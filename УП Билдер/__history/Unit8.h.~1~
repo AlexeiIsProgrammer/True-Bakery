@@ -1,0 +1,22 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit8H
+#define Unit8H
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+//---------------------------------------------------------------------------
+class TChange : public TForm
+{
+__published:	// IDE-managed Components
+	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
+private:	// User declarations
+public:		// User declarations
+	__fastcall TChange(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TChange *Change;
+//---------------------------------------------------------------------------
+#endif

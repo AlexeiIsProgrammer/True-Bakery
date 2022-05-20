@@ -1,0 +1,126 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = #1044#1086#1073#1072#1074#1083#1077#1085#1080#1077' '#1079#1072#1087#1080#1089#1080
+  ClientHeight = 317
+  ClientWidth = 665
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Edit1: TEdit
+    Left = 32
+    Top = 24
+    Width = 121
+    Height = 21
+    BorderStyle = bsNone
+    Color = clWhite
+    TabOrder = 0
+    TextHint = #1048#1084#1103
+  end
+  object Edit2: TEdit
+    Left = 32
+    Top = 64
+    Width = 121
+    Height = 21
+    BorderStyle = bsNone
+    Color = clWhite
+    TabOrder = 1
+    TextHint = #1060#1072#1084#1080#1083#1080#1103
+  end
+  object Edit3: TEdit
+    Left = 32
+    Top = 104
+    Width = 121
+    Height = 21
+    BorderStyle = bsNone
+    Color = clWhite
+    TabOrder = 2
+    TextHint = #1054#1090#1095#1077#1089#1090#1074#1086
+  end
+  object Button1: TButton
+    Left = 256
+    Top = 232
+    Width = 121
+    Height = 45
+    Caption = #1044#1086#1073#1072#1074#1080#1090#1100
+    TabOrder = 3
+  end
+  object ComboBox1: TComboBox
+    Left = 416
+    Top = 24
+    Width = 97
+    Height = 21
+    TabOrder = 4
+    Text = #1042#1099#1073#1077#1088#1080#1090#1077' '#1087#1086#1083
+    Items.Strings = (
+      #1084
+      #1078)
+  end
+  object ComboBox2: TComboBox
+    Left = 536
+    Top = 24
+    Width = 105
+    Height = 21
+    TabOrder = 5
+    Text = #1042#1099#1073#1077#1088#1080#1090#1077' '#1082#1091#1088#1089
+    Items.Strings = (
+      '1'
+      '2'
+      '3'
+      '4')
+  end
+  object CalendarPicker1: TCalendarPicker
+    Left = 176
+    Top = 24
+    Width = 217
+    Height = 33
+    CalendarHeaderInfo.DaysOfWeekFont.Charset = DEFAULT_CHARSET
+    CalendarHeaderInfo.DaysOfWeekFont.Color = clWindowText
+    CalendarHeaderInfo.DaysOfWeekFont.Height = -13
+    CalendarHeaderInfo.DaysOfWeekFont.Name = 'Segoe UI'
+    CalendarHeaderInfo.DaysOfWeekFont.Style = []
+    CalendarHeaderInfo.Font.Charset = DEFAULT_CHARSET
+    CalendarHeaderInfo.Font.Color = clWindowText
+    CalendarHeaderInfo.Font.Height = -20
+    CalendarHeaderInfo.Font.Name = 'Segoe UI'
+    CalendarHeaderInfo.Font.Style = []
+    Color = clWindow
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clGray
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 6
+    TextHint = #1042#1099#1073#1077#1088#1080#1090#1077' '#1076#1072#1090#1091' '#1088#1086#1078#1076#1077#1085#1080#1103
+  end
+  object ComboBox3: TComboBox
+    Left = 472
+    Top = 136
+    Width = 113
+    Height = 21
+    TabOrder = 7
+    Text = #1043#1086#1076' '#1087#1086#1089#1090#1091#1087#1083#1077#1085#1080#1103
+    Items.Strings = (
+      '2017'
+      '2018'
+      '2019'
+      '2020'
+      '2021')
+  end
+  object Edit4: TEdit
+    Left = 32
+    Top = 136
+    Width = 119
+    Height = 21
+    BorderStyle = bsNone
+    TabOrder = 8
+    TextHint = #1057#1088#1077#1076#1085#1080#1081' '#1073#1072#1083#1083
+  end
+end

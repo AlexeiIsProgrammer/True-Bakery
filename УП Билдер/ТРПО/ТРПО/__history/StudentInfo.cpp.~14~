@@ -1,0 +1,120 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+#include "main.h"
+#include "TRPO.h"
+#include "AddStudent.h"
+#include "StudentInfo.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm3 *Form3;
+//---------------------------------------------------------------------------
+__fastcall TForm3::TForm3(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+extern int sele;
+void __fastcall TForm3::nextClick(TObject *Sender)
+{
+	Form1->ADOQuery1->Next();
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm3::backClick(TObject *Sender)
+{
+	Form1->ADOQuery1->Prior();
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm3::FormActivate(TObject *Sender)
+{
+   	date->Text = FormatDateTime("dd.mm.yyyy", Date());
+	Form1->ADOQuery1->First();
+	while(!Form1->ADOQuery1->Eof)
+	{
+		if(Form1->ADOQuery1->FieldByName("Номер")->AsInteger==sele)
+		{
+		   break;
+		}
+		Form1->ADOQuery1->Next();
+    }
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm3::changeClick(TObject *Sender)
+{
+	change->Enabled=false;
+	next->Enabled=false;
+	back->Enabled=false;
+	save->Enabled=true;
+	sex->ReadOnly=false;
+	date->ReadOnly=false;
+	otch->ReadOnly=false;
+	fam->ReadOnly=false;
+	name->ReadOnly=false;
+	spec->ReadOnly=false;
+	year->ReadOnly=false;
+	cource->ReadOnly=false;
+	ball->ReadOnly=false;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm3::saveClick(TObject *Sender)
+{
+	if(name->Text!="" &&fam->Text!=""&&otch->Text!=""&&date->Text!=""&&ball->Text!="")
+			{
+			   Form1->ADOQuery1->Edit();
+				Form1->ADOQuery1->Fields->FieldByName("Фамилия")->AsString=fam->Text;
+			   Form1->ADOQuery1->Fields->FieldByName("Имя")->AsString=name->Text;
+			   Form1->ADOQuery1->Fields->FieldByName("Отчество")->AsString=otch->Text;
+			   Form1->ADOQuery1->Fields->FieldByName("Курс")->AsInteger=StrToInt(cource->Items->Strings[cource->ItemIndex]);
+			   Form1->ADOQuery1->Fields->FieldByName("Пол")->AsString=sex->Items->Strings[sex->ItemIndex];
+			   Form1->ADOQuery1->Fields->FieldByName("Дата рождения")->AsString=date->Text;
+			   Form1->ADOQuery1->Fields->FieldByName("Специальность")->AsString=spec->Items->Strings[spec->ItemIndex];
+			   Form1->ADOQuery1->Fields->FieldByName("Год поступления")->AsInteger=StrToInt(year->Items->Strings[year->ItemIndex]);
+			   Form1->ADOQuery1->Fields->FieldByName("Средний балл")->AsFloat=StrToFloat(ball->Text);
+			   Form1->ADOQuery1->Post();
+				change->Enabled=true;
+				next->Enabled=true;
+				back->Enabled=true;
+				save->Enabled=false;
+				sex->ReadOnly=true;
+				date->ReadOnly=true;
+				otch->ReadOnly=true;
+				fam->ReadOnly=true;
+				name->ReadOnly=true;
+				spec->ReadOnly=true;
+				year->ReadOnly=true;
+				cource->ReadOnly=true;
+				ball->ReadOnly=true;
+			}
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm3::ballKeyPress(TObject *Sender, System::WideChar &Key)
+{
+if (isdigit(Key) || (Key == VK_BACK)) { return; }
+
+//Разрешили цифры и BackSace
+
+else if ((Key =='-' || Key=='+') &&
+
+(ball->Text.Length()==0)) return;
+
+//Знак числа можно вводить только в первую позицию поля
+
+if (Key == '.' || Key ==',' ) {
+
+Key=FormatSettings.DecimalSeparator;
+
+if (ball->Text.Pos(Key)!=0) Key=0;
+
+//уже есть разделитель - нельзя вводить
+
+else return;
+
+}
+
+Key = 0;
+}
+//---------------------------------------------------------------------------
+

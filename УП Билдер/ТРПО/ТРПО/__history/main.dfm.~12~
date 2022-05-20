@@ -1,0 +1,110 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'main'
+  ClientHeight = 369
+  ClientWidth = 690
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnMouseWheelDown = FormMouseWheelDown
+  OnMouseWheelUp = FormMouseWheelUp
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBCtrlGrid1: TDBCtrlGrid
+    Left = 8
+    Top = 8
+    Width = 674
+    Height = 264
+    DataSource = DataSource1
+    PanelHeight = 66
+    PanelWidth = 657
+    ParentShowHint = False
+    TabOrder = 1
+    RowCount = 4
+    SelectedColor = clMoneyGreen
+    ShowFocus = False
+    ShowHint = False
+    Visible = False
+    object DBEdit1: TDBEdit
+      Left = 64
+      Top = 24
+      Width = 145
+      Height = 21
+      BorderStyle = bsNone
+      Color = cl3DLight
+      DataField = #1060#1072#1084#1080#1083#1080#1103
+      DataSource = DataSource1
+      TabOrder = 0
+    end
+    object DBEdit2: TDBEdit
+      Left = 272
+      Top = 24
+      Width = 137
+      Height = 21
+      BorderStyle = bsNone
+      Color = cl3DLight
+      DataField = #1048#1084#1103
+      DataSource = DataSource1
+      TabOrder = 1
+    end
+    object DBEdit3: TDBEdit
+      Left = 448
+      Top = 24
+      Width = 153
+      Height = 21
+      BorderStyle = bsNone
+      Color = cl3DLight
+      DataField = #1054#1090#1095#1077#1089#1090#1074#1086
+      DataSource = DataSource1
+      TabOrder = 2
+    end
+  end
+  object Check: TButton
+    Left = 256
+    Top = 118
+    Width = 177
+    Height = 57
+    Caption = #1057#1087#1080#1089#1086#1082' '#1074#1089#1077#1093' '#1089#1090#1091#1076#1077#1085#1090#1086#1074
+    TabOrder = 0
+    OnClick = CheckClick
+  end
+  object add: TButton
+    Left = 240
+    Top = 278
+    Width = 177
+    Height = 49
+    Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1089#1090#1091#1076#1077#1085#1090#1072
+    TabOrder = 2
+    Visible = False
+    OnClick = addClick
+  end
+  object back: TButton
+    Left = 0
+    Top = 334
+    Width = 75
+    Height = 25
+    Caption = 'back'
+    TabOrder = 3
+    Visible = False
+    OnClick = backClick
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOQuery1
+    Left = 592
+    Top = 280
+  end
+  object ADOQuery1: TADOQuery
+    Connection = Form15.ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select * from '#1048#1085#1092#1086';')
+    Left = 640
+    Top = 280
+  end
+end

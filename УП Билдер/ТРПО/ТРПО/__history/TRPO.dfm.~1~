@@ -1,0 +1,57 @@
+object Form15: TForm15
+  Left = 0
+  Top = 0
+  Caption = 'Form15'
+  ClientHeight = 333
+  ClientWidth = 766
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Button1: TButton
+    Left = 304
+    Top = 152
+    Width = 153
+    Height = 33
+    Caption = #1056#1077#1075#1080#1089#1090#1088#1072#1094#1080#1103
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 304
+    Top = 224
+    Width = 153
+    Height = 33
+    Caption = #1042#1093#1086#1076
+    TabOrder = 1
+  end
+  object DBGrid1: TDBGrid
+    Left = 438
+    Top = 8
+    Width = 320
+    Height = 120
+    TabOrder = 2
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object ADOQuery1: TADOQuery
+    Parameters = <>
+    Left = 680
+    Top = 192
+  end
+  object ADOConnection1: TADOConnection
+    Left = 544
+    Top = 192
+  end
+  object DataSource1: TDataSource
+    Left = 608
+    Top = 192
+  end
+end

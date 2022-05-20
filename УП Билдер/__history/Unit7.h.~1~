@@ -1,0 +1,22 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit7H
+#define Unit7H
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+//---------------------------------------------------------------------------
+class TAdd : public TForm
+{
+__published:	// IDE-managed Components
+	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
+private:	// User declarations
+public:		// User declarations
+	__fastcall TAdd(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TAdd *Add;
+//---------------------------------------------------------------------------
+#endif

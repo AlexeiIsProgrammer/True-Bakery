@@ -1,0 +1,30 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit6H
+#define Unit6H
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Graphics.hpp>
+#include <Vcl.Imaging.pngimage.hpp>
+//---------------------------------------------------------------------------
+class TForm6 : public TForm
+{
+__published:	// IDE-managed Components
+	TImage *Image1;
+	TImage *Image2;
+	TImage *Image4;
+	TImage *Image5;
+	TImage *Image3;
+	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
+private:	// User declarations
+public:		// User declarations
+	__fastcall TForm6(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm6 *Form6;
+//---------------------------------------------------------------------------
+#endif

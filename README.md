@@ -10,3 +10,8 @@ RUS
 Эта курсовая работа была сделана в C++ Builder на VCL фреймворке, поэтому большинство файлов относит к языку Pascal, вся логика писалась на C++.
 
 *Спасибо за внимание / Thank's for attention
+
+
+P.S. 
+Оно может не работать, ибо Билдер имеет много ошибок, которые сделаны еще много месяцев назад и не исправлялись, но Вы можете посмотреть C++ файлы) 
+It may not work, because the Builder has a lot of errors that were made many months ago and were not fixed, but you can look at the C++ files)

@@ -13,5 +13,5 @@ RUS
 
 
 P.S. 
-Оно может не работать, ибо Билдер имеет много ошибок, которые сделаны еще много месяцев назад и не исправлялись, но Вы можете посмотреть C++ файлы) 
+Оно может не работать, ибо Билдер имеет много ошибок, которые сделаны еще много месяцев назад и не исправлялись, но Вы можете посмотреть C++ файлы) <br>
 It may not work, because the Builder has a lot of errors that were made many months ago and were not fixed, but you can look at the C++ files)
